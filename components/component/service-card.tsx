@@ -1,6 +1,10 @@
 import React from 'react';
-
-const ServiceCard = ({ image, serviceName, buttonText,  }) => {
+type props= {
+  image : string,
+  serviceName : string,
+  buttonText : string,
+}
+const ServiceCard = ({ image, serviceName, buttonText,  }:props) => {
   return (
     <div className="max-w-xs rounded overflow-hidden shadow-lg">
       <img className="w-full" src={image} alt={serviceName} />
