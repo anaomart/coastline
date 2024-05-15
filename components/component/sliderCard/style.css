@@ -1,0 +1,8 @@
+img {
+    object-fit: contain !important;
+    background-position: bottom !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    height: 80% !important;
+    width: 100vw !important;
+}
