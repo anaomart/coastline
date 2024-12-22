@@ -1,3 +1,4 @@
+import { Phone } from 'lucide-react';
 import React from 'react';
 
 export function  Hero () {
@@ -20,18 +21,25 @@ export function  Hero () {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center px-2 justify-center h-screen text-white">
         <div className=' -mt-32'>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl lg:leading-[58px]  font-bold text-center mb-4">Reduce Your Energy Bills and Embrace Clean Energy with <span className='text-yellow-500 uppercase'>coastline </span>ENERGY GROUP, LLC </h1>
-        <p className="text-sm lg:text-base text-center mb-8 md:w-[60vw] m-auto">Coastline Energy Group, SunPower’s Authorized Dealer is a leading provider of solar energy solutions, dedicated to making a positive impact on the environment.</p>
+          <div className='text-center text-lg md:text-xl uppercase font-semibold tracking-widest  lg:text-3xl bg-yellow-500 w-fit mx-auto px-1 py-1 rounded-lg'>
+            Welcome to
+          </div>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl uppercase lg:leading-[58px]  font-bold text-center mb-4">
+        Coastline    <span className='text-yellow-500 uppercase'> ENERGY GROUP, LLC </span> </h1>
+        <p className="text-sm lg:text-base text-center mb-8 md:w-[85ch]  m-auto">
+       <span className='font-bold'> Coastline Energy Group</span>, is a leading provider of solar energy solutions, dedicated to making a positive impact on the environment.          </p>
        
         </div>
         <div className='flex gap-4'>
        <button className="bg-yellow-500 hover:bg-yellow-600 text-white text-sm md:text-base font-bold py-2 sm:px-4 px-2 rounded">
           Get Started
         </button>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white text-sm md:text-base font-bold py-2 sm:px-4 px-2 rounded">
-        Request a Quote Today																								
-
-        </button>
+        <a href="tel:1-888-61-SOLAR">
+                <button className="bg-blue-500 flex gap-2 items-center justify-center hover:bg-blue-600 text-white text-sm md:text-base font-bold py-2 sm:px-4 px-2 rounded">
+                <Phone size={20} />
+                1-888-61-SOLAR
+                </button> 
+                 </a>
        </div>
       </div>
     </div>

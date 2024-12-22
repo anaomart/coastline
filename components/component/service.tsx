@@ -1,5 +1,8 @@
 import React from 'react'
 import ServiceCard from './service-card'
+import Image from 'next/image'
+import service_1 from '../../public/about-2.avif'
+import service_2 from '../../public/commercial.jpeg'
 
 export default function Service() {
   return (
@@ -15,16 +18,19 @@ export default function Service() {
           
       <div className='relative flex-1 cursor-pointer  rounded-xl '>
         <div>
-          <img className='w-full rounded-xl  object-cover bg-contain h-[250px]  md:h-[480px]    ' 
-          src='https://images.unsplash.com/flagged/photo-1566838616793-29a4102a5b0e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='home'/>
-        </div>
+          <Image  className='w-full rounded-xl  object-cover bg-contain h-[250px]  md:h-[480px]    ' 
+          src={service_1}
+          alt='Residential'
+ />            </div>
           <div className="absolute top-0 rounded-xl left-0 w-full h-full bg-black opacity-20 z-1"></div>
         <h3 className='absolute bottom-0 text-3xl text-white z-10 p-5 font-semibold'>Residential</h3>
       </div>  
       <div className='relative flex-1 cursor-pointer rounded-xl '>
         <div>
-          <img className='w-full rounded-xl  object-cover bg-contain  h-[250px]  md:h-[480px]' 
-          src='https://images.pexels.com/photos/256206/pexels-photo-256206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='home'/>
+        <Image  className='w-full rounded-xl  object-cover bg-contain h-[250px]  md:h-[480px]    ' 
+          src={service_2}
+          alt='Commercial'
+ />     
         </div>
           <div className="absolute top-0 rounded-xl left-0 w-full h-full bg-black opacity-20 z-1"></div>
         <h3 className='absolute bottom-0 text-3xl text-white z-10 p-5 font-semibold'>Commercial</h3>

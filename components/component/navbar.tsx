@@ -1,14 +1,17 @@
 'use client'
+import Link from 'next/link'
 import React, { useState } from 'react'
-
+import logo from '../../public/LOGO.png'
+import Image from 'next/image'
 export default function Navbar() {
     const [state, setState] = useState(false)
 
   // Replace # path with your path
   const navigation = [
-      { title: "About", path: "#" },
-      { title: "Services", path: "#" },
-      { title: "Careers", path: "#" },
+      { title: "Home", path: "/" },
+      { title: "About", path: "/about" },
+      { title: "Services", path: "/services" },
+      { title: "Careers", path: "/careers" },
       { title: "Contact", path: "#" }
       
   ]
@@ -17,14 +20,14 @@ export default function Navbar() {
     <nav className="bg-white  w-full border-b md:border-0 md:static">
     <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between md:block">
-              <a href="#">
-                  <img
-                      src="https://coastline.contractors/wp-content/uploads/2023/01/LOGO1--768x432.png" 
+              <Link href="/">
+                  <Image
+                    src={logo} 
                       width={180} 
                       height={10}
                       alt="coastline logo"
                   />
-              </a>
+              </Link>
             <div className="md:hidden">
                 <button className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
                     onClick={() => setState(!state)}
@@ -49,9 +52,9 @@ export default function Navbar() {
                     navigation.map((item, idx) => {
                         return (
                           <li key={idx} className="relative flex gap-2 text-gray-600 hover:text-mainBlue">
-                              <a href={item.path}>
+                              <Link href={item.path}>
                                   { item.title }
-                              </a>
+                              </Link>
                               { item.title == 'Careers' && <div className='bg-lime-500 p-1 text-white rounded-lg text-xs '>Hiring</div>}
                           </li>
                         )
