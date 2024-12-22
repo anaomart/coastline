@@ -24,9 +24,9 @@ const stagger = {
 export default function AboutUs() {
   return (
     <main className="flex flex-col">
-      <section className="w-full py-10 bg-gradient-to-r from-blue-900  to-blue-600">
+      <section className="w-full p-20   bg-gradient-to-r from-blue-900  to-blue-600">
         <motion.div 
-          className="container mx-auto px-4 flex flex-col items-center text-center text-white"
+          className=" mx-auto px-4 flex-col flex items-center text-center text-white"
           initial="initial"
           animate="animate"
           variants={stagger}
@@ -48,8 +48,8 @@ export default function AboutUs() {
         </motion.div>
       </section>
 
-      <section className="w-full py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      <section className="w-full p-20 md:py-32">
+        <div className=" mx-auto px-4">
           <motion.div 
             className="flex flex-col md:flex-row items-center justify-between gap-12"
             initial="initial"
@@ -86,8 +86,8 @@ You have our loyalty, and we value your approval beyond anything else.          
         </div>
       </section>
 
-      <section className="w-full py-20 md:py-32 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="w-full p-20 md:py-32 bg-gray-50">
+        <div className=" mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
             initial="initial"
@@ -137,8 +137,8 @@ You have our loyalty, and we value your approval beyond anything else.          
         </div>
       </section>
 
-      <section className="w-full py-20 md:py-32">
-        <div className="container mx-auto px-4">
+      <section className="w-full p-20 md:py-32">
+        <div className=" mx-auto px-4">
           <motion.div 
             className="flex flex-col md:flex-row items-center justify-between gap-12"
             initial="initial"
