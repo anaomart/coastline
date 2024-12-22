@@ -6,18 +6,13 @@ import home from "../assets/home_service.jpg";
 import Commercial from "../assets/commercial.jpg";
 
 import CTA from "@/components/component/cta";
+import HeaderSection from "@/components/ui/HeaderSection";
 
 export default function page() {
   return (
     <>
       <main className="flex flex-col">
-        <section className="w-full py-20  md:py-32 bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]">
-          <div className=" px-1  flex flex-col items-center text-center  text-white">
-            <h1 className="text-3xl uppercase md:text-5xl lg:text-6xl lg:leading-[58px]  font-bold text-center mb-4">
-              Services
-            </h1>
-          </div>
-        </section>
+        <HeaderSection text={"Services"} />
         <section className="w-ful  pt-12 md:pt-24 lg:py-20  ">
           <div className=" m-auto px-4 md:px-6 space-y-10 xl:space-y-16">
             <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 lg:grid-cols-2 md:gap-16">
@@ -52,7 +47,7 @@ export default function page() {
           </div>
         </section>
         <section className="w-ful  pt-12 md:pt-24 lg:py-20  ">
-          <div className="container m-auto px-4 md:px-6 space-y-10 xl:space-y-16">
+          <div className=" m-auto px-4 md:px-6 space-y-10 xl:space-y-16">
             <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 lg:grid-cols-2 md:gap-16">
               <div className="flex order-2 md:order-1 justify-center">
                 <Image
@@ -88,7 +83,7 @@ export default function page() {
           </div>
         </section>{" "}
         <section className="w-ful  pt-12 md:pt-24 lg:py-20  ">
-          <div className="container m-auto px-4 md:px-6 space-y-10 xl:space-y-16">
+          <div className=" m-auto px-4 md:px-6 space-y-10 xl:space-y-16">
             <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 lg:grid-cols-2 md:gap-16">
               <div>
                 <h1 className="text-xl md:text-2xl lg:text-3xl font-bold my-4 text-blue-500">

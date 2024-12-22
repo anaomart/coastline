@@ -1,4 +1,7 @@
 'use client'
+
+import Image from "next/image"
+
 /* eslint-disable react/no-unescaped-entities */
 export default function Footer()  {
 
@@ -26,7 +29,7 @@ export default function Footer()  {
     return (
         <footer className="text-gray-500 pt-20 pb-5 bg-white px-4  max-w-screen-xl mx-auto md:px-8">
             <div className="max-w-lg sm:mx-auto sm:text-center">
-                <img src="https://coastline.contractors/wp-content/uploads/2023/01/LOGO1--768x432.png" alt='logo' className="w-32 sm:mx-auto" />
+                <Image src="/logo.png" alt='logo' width={180} height={180} className="w-48 sm:mx-auto" />
                 <p className="leading-relaxed mt-2 text-[15px]">
                 Coastline Solar delivers top-notch solar energy solutions with a strong focus on efficiency and customer satisfaction. Their expert team provides personalized assessments and comprehensive plans, ensuring optimal energy savings and cost-effectiveness.                </p>
             </div>

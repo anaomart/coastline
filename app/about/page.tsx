@@ -6,6 +6,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { ActivityIcon, AwardIcon, CalendarIcon, DownloadIcon, MonitorIcon, RocketIcon, SaveIcon, TypeIcon, ViewIcon } from 'lucide-react'
 import CTA from '@/components/component/cta'
+import HeaderSection from '@/components/ui/HeaderSection'
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -24,32 +25,10 @@ const stagger = {
 export default function AboutUs() {
   return (
     <main className="flex flex-col">
-      <section className="w-full p-20   bg-gradient-to-r from-blue-900  to-blue-600">
-        <motion.div 
-          className=" mx-auto px-4 flex-col flex items-center text-center text-white"
-          initial="initial"
-          animate="animate"
-          variants={stagger}
-        >
-          <motion.h1 
-            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4"
-            variants={fadeIn}
-          >
-            <span className='text-yellow-500 uppercase block md:inline'>Coastline </span>
-            ENERGY GROUP
-          </motion.h1>
-          <motion.h2 
-            className="text-2xl md:text-4xl font-bold tracking-tight mb-4"
-            variants={fadeIn}
-          >
-            Powering a Sustainable Future
-          </motion.h2>
-         
-        </motion.div>
-      </section>
+      <HeaderSection text={'about us'}/>
 
-      <section className="w-full p-20 md:py-32">
-        <div className=" mx-auto px-4">
+      <section className="w-full  md:px-20 py-20 md:py-32">
+        <div className=" max-w-[1300px] mx-auto px-4">
           <motion.div 
             className="flex flex-col md:flex-row items-center justify-between gap-12"
             initial="initial"
@@ -86,8 +65,8 @@ You have our loyalty, and we value your approval beyond anything else.          
         </div>
       </section>
 
-      <section className="w-full p-20 md:py-32 bg-gray-50">
-        <div className=" mx-auto px-4">
+      <section className="w-full md:px-10 py-20 md:py-32 bg-gray-50">
+        <div className="max-w-[1300px] mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
             initial="initial"
@@ -137,8 +116,8 @@ You have our loyalty, and we value your approval beyond anything else.          
         </div>
       </section>
 
-      <section className="w-full p-20 md:py-32">
-        <div className=" mx-auto px-4">
+      <section className="w-full md:px-10 py-20 md:py-32">
+        <div className=" max-w-[1300px]  mx-auto px-4">
           <motion.div 
             className="flex flex-col md:flex-row items-center justify-between gap-12"
             initial="initial"

@@ -1,127 +1,108 @@
 'use client'
-import { useState } from 'react';
 
-export default function Career() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    education: '',
-    experience: '',
-    resume: null,
-  });
+import { CheckCircle2 } from 'lucide-react'
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+import HeaderSection from '@/components/ui/HeaderSection'
 
-  const handleChange = (e:any) => {
-    const { name, value, files } = e.target;
-    setFormData({
-      ...formData,
-      [name]: files ? files[0] : value,
-    });
-  };
-
-  const handleSubmit = (e:any) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
-  };
-
+export default function SolarConsultantPosition() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
-        <h1 className="text-2xl font-bold mb-6">Career Opportunities</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-              Full Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              required
+   <>
+         <HeaderSection text={"Carers"}/>
+
+   <div className="max-w-5xl mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold mb-2">
+        <span className="text-black">Coastline </span>
+        <span className="text-yellow-500">Energy</span>
+        <span className="text-black"> Group, LLC.</span>
+      </h1>
+
+      <div className="text-gray-700 mb-12">
+        Coastline Energy Group, is a leading provider of solar energy solutions, dedicated to making a positive impact on the environment and helping homeowners and businesses owners save money through renewable energy. We offer customized solar solutions to meet the unique needs of our clients, with a strong commitment to sustainability and innovation. We are seeking a highly motivated and dynamic Solar Consultants to join our team. As a Solar Consultant, you will be responsible for educating potential customers on the benefits of solar energy and guiding them through the process of transitioning to solar power. Your role will involve engaging with clients, assessing their energy needs, and presenting solar solutions tailored to their requirements.
+      </div>
+
+      <div className="mb-12">
+        <h2 className="text-3xl font-bold mb-6">
+          <span className="text-black">Key </span>
+          <span className="text-yellow-500">Responsibilities</span>
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            "Educate potential clients on the advantages of solar energy and its environmental benefits. Conduct on-site or virtual consultations to evaluate the energy needs of potential customers.",
+            "Create customized solar energy proposals and presentations.",
+            "Guide clients through the process of selecting the right solar system for their homes or businesses.",
+            "Provide accurate and detailed information regarding available incentives, rebates, and financing options.",
+            "Maintain up-to-date knowledge of solar technology, industry trends, and government regulations.",
+            "Collaborate with the sales team to ensure a seamless transition from consultation to the sales process.",
+            "Establish and maintain strong customer relationships and follow up on leads.",
+            "Meet or exceed monthly and quarterly sales targets."
+          ].map((responsibility, index) => (
+            <div key={index} className="flex items-start gap-2">
+              <CheckCircle2 className="w-5 h-5 mt-1 text-yellow-500 flex-shrink-0" />
+              <p className="text-gray-700">{responsibility}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-12">
+        <h2 className="text-3xl font-bold mb-6">Qualifications</h2>
+        <div className="space-y-4">
+          {[
+            "A passion for renewable energy and a strong desire to promote sustainable living. Excellent communication and interpersonal skills.",
+            "Strong presentation and negotiation abilities.",
+            "Prior experience in solar sales or a related field is a plus, but not required."
+          ].map((qualification, index) => (
+            <div key={index} className="flex items-start gap-2">
+              <CheckCircle2 className="w-5 h-5 mt-1 text-yellow-500 flex-shrink-0" />
+              <p className="text-gray-700">{qualification}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-3xl font-bold mb-6">
+          <span className="text-black">Apply </span>
+          <span className="text-yellow-500">Now</span>
+        </h2>
+        <form className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-2">
+            <Label htmlFor="fullName">Full Name</Label>
+            <Input id="fullName" className='!bg-white'  required />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="email">Email</Label>
+            <Input id="email" className='!bg-white'  type="email" required />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="phone">Phone</Label>
+            <Input id="phone" className='!bg-white'  type="tel" required />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="subject">Subject</Label>
+            <Input id="subject"  className='!bg-white'  required />
+          </div>
+          <div className="space-y-2 md:col-span-2">
+            <Label htmlFor="message">Message</Label>
+            <Textarea 
+              id="message" 
+              className="min-h-[150px] !bg-white" 
+              required 
             />
           </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="education">
-              Education
-            </label>
-            <input
-              type="text"
-              id="education"
-              name="education"
-              value={formData.education}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="experience">
-              Work Experience
-            </label>
-            <textarea
-              id="experience"
-              name="experience"
-              value={formData.experience}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              required
-            />
-          </div>
-          <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="resume">
-              Resume
-            </label>
-            <input
-              type="file"
-              id="resume"
-              name="resume"
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              required
-            />
-          </div>
-          <div className="flex items-center justify-between">
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
-              Submit Application
-            </button>
-          </div>
+          <Button 
+            type="submit" 
+            className="md:col-span-2 !text-white !bg-yellow-500 !hover:bg-yellow-600"
+          >
+            Submit Application
+          </Button>
         </form>
       </div>
     </div>
-  );
+   </> 
+  )
 }
+
