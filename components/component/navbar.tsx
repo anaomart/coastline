@@ -12,7 +12,7 @@ export default function Navbar() {
       { title: "About", path: "/about" },
       { title: "Services", path: "/services" },
       { title: "Careers", path: "/career" },
-      { title: "Contact", path: "/contact" }
+      { title: "Contact", path: "/contactus" }
       
   ]
   
@@ -63,9 +63,9 @@ export default function Navbar() {
             </ul>
         </div>
         <div className="hidden md:inline-block">
-          <a href="#" className="py-3 px-4 text-white bg-blue-500 hover:bg-blue-700 rounded-md shadow">
+          <Link href="/contactus" className="py-3 px-4 text-white bg-blue-500 hover:bg-blue-700 rounded-md shadow">
               Get Started
-          </a>
+          </Link>
         </div>
     </div>
 </nav>

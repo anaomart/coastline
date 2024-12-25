@@ -1,6 +1,6 @@
 export default function ContactUs(){
 
-    const servicesItems = ["Home Energy Solutions", "Commerical Energy Solutions", "Roof Replacement"]
+    const servicesItems = ["Home Energy Solutions", "Commercial Energy Solutions", "Roof Replacement"]
 
     return (
         <main className="flex py-20">

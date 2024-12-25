@@ -39,7 +39,7 @@ export default function Service() {
 
       <div className='relative flex-1 rounded-xl '>
         <div>
-        <Image  className='w-full rounded-xl  object-cover bg-contain h-[250px]  md:h-[480px]    ' 
+        <Image className='w-full rounded-xl  object-cover bg-contain h-[250px]  md:h-[480px]    ' 
           src={service_3}
           alt='Commercial'
  />     
